@@ -28,6 +28,34 @@
     }
 
   }],
+  // 声明分包
+  // 我们在项目中，把 tabBar 相关的 4 个页面放到主包中，其它页面（例如：商品详情页、商品列表页）放到分包中
+  "subPackages":[
+    {
+      // root属性指定分包的根目录
+      "root":"subpkg",
+      // pages数组表示当前分包的页面
+      "pages":[{
+                    "path" : "goods_detail/goods_detail",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
+                ,{
+                    "path" : "goods_list/goods_list",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
+            ]
+    }
+  ],
   "globalStyle": {
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "ushop",
