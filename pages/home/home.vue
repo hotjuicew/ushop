@@ -124,7 +124,7 @@
         if (item.name === '分类') {
           // 调用 api
           uni.switchTab({
-            url: '/pages/cart/cart'
+            url: '/pages/cate/cate'
           })
         }
       }
