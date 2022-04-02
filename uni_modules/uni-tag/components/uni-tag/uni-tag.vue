@@ -111,7 +111,7 @@
 	$uni-success: #18bc37 !default;
 	$uni-warning: #f3a73f !default;
 	$uni-error: #e43d33 !default;
-	$uni-info: #8f939c !default;
+	$uni-info: #F3F4F4 !default;
 
 
 	$tag-default-pd: 4px 7px;
@@ -123,12 +123,12 @@
 		font-size: 12px;
 		font-weight: 200;
 		padding: $tag-default-pd;
-		color: #fff;
+		color: #000000;
 		border-radius: 3px;
-		background-color: $uni-info;
+		background-color: #e2e2e2;
 		border-width: 1rpx;
 		border-style: solid;
-		border-color: $uni-info;
+		border-color: #e2e2e2;
 		/* #ifdef H5 */
 		cursor: pointer;
 		/* #endif */

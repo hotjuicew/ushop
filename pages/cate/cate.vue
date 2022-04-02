@@ -1,5 +1,8 @@
 <template>
   <view>
+    
+    <my-search @myclick="gotoSearch"></my-search>
+    
     <view class="scroll-view-container">
       <!-- 左侧 的滑动区域 -->
       <scroll-view class="left-scroll-view" scroll-y="true" :style="{height: wh+'px'}">
@@ -48,7 +51,7 @@
       // 这个api是可以获取当前设备信息的
       const sysInf = uni.getSystemInfoSync()
       // 可使用的窗口高度
-      this.wh = sysInf.windowHeight
+      this.wh = sysInf.windowHeight-50//减去搜索区域50像素的高度
       // 小程序method方法和onload方法里面this指向的都是当前page对象
       // 获取分类列表数据
       this.getCateList()
@@ -84,6 +87,11 @@
           //一个问题：为什么取名为cid？
           url:'/subpkg/goods_list/goods_list?cid=' + item3.cat_id
         })
+      },
+      gotoSearch(){
+       uni.navigateTo({
+         url:'/subpkg/search/search'
+       })
       }
 
 

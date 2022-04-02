@@ -1,5 +1,9 @@
 <template>
   <view>
+<view class="search-box">
+  <!-- 搜索组件 -->
+  <my-search @click></my-search>
+</view>
     <!-- 轮播图的区域 -->
     <swiper :indicator-dots="true" :autoplay="true" :interval="3000" :duration="1000" :circular='true'>
       <swiper-item v-for="(item,index) in swiperList" :key='index'>
@@ -127,6 +131,11 @@
             url: '/pages/cate/cate'
           })
         }
+      },
+      gotoSearch(){
+       uni.navigateTo({
+         url:'/subpkg/search/search'
+       })
       }
 
     },
@@ -174,5 +183,11 @@
     display: flex;
     padding-left: 10rpx;
   }
+/*  设置搜索框吸顶效果 */
+  .search-box {
+  position: sticky;
+  top: 0;
+  z-index: 999;/* 提高层级 防止被覆盖 */
+}
   
 </style>
